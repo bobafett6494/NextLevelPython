@@ -21,26 +21,34 @@ def assert_equals(actual, expected):
 #  the number otherwise
 
 
+def FizzBuzz(number):
+    if number % 3 == 0 and number % 5 ==0: # if number % 15 ==0
+        return "FizzBuzz"
+    elif number % 3 == 0:
+        return "Fizz"
+    elif number % 5 == 0:
+        return "Buzz"
+    else:
+        return number
+
 # Todo: Test the function
 
+assert_equals(FizzBuzz(1),1)
+assert_equals(FizzBuzz(2),2)
+assert_equals(FizzBuzz(3),"Fizz")
+assert_equals(FizzBuzz(5),"Buzz")
+assert_equals(FizzBuzz(6),"Fizz")
+assert_equals(FizzBuzz(15),"FizzBuzz")
 
 # Todo: Request a number from the user
 
-def FizzBuss(number):
-    if number % 3 == 0 and number % 5 ==0:
-        print("FizzBuzz")
-    elif number % 3 == 0:
-        print("Fizz")
-    elif number & 5 == 0:
-        print("Buzz")
-    else:
-        print(number)
-
-def game():
-    number = int(input("Insert a number: "))
-    FizzBuss(number)
-
-game()
+number = int(input("Insert a number: "))
 
 # Todo: Print a list of fizz-buzzed numbers from 1 to the given number
 
+fizzbuzz_list = []
+
+for n in range(number):
+    fizzbuzz_list.append(FizzBuzz(n+1))
+
+print(f'FizzBuzz List: {fizzbuzz_list}')
