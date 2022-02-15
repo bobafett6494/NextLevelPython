@@ -26,6 +26,21 @@ def assert_equals(actual, expected):
 
 # Todo: Request a number from the user
 
+def FizzBuss(number):
+    if number % 3 == 0 and number % 5 ==0:
+        print("FizzBuzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    elif number & 5 == 0:
+        print("Buzz")
+    else:
+        print(number)
+
+def game():
+    number = int(input("Insert a number: "))
+    FizzBuss(number)
+
+game()
 
 # Todo: Print a list of fizz-buzzed numbers from 1 to the given number
 
