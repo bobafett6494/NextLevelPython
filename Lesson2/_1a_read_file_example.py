@@ -2,7 +2,7 @@
 Read a file with a number on each line. Print the sum of those numbers.
 """
 
-# Open file
+# Open file (Read mode)
 file = open('data/read_example.txt', 'r')
 
 sum = 0
@@ -15,3 +15,4 @@ print(f'Sum is {sum}')
 
 # Close the file
 file.close()
+
