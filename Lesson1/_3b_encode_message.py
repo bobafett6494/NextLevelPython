@@ -10,5 +10,13 @@ code = {
 
 # Get a message from the user
 message = input("What is your message? ")
+num_message=""
 
 # Todo: Translate user input into code of numbers
+for letter in message.lower():
+    if letter == " ":
+        num_message += " "
+    else:
+        num_message += str(code.get(letter, letter))
+
+print(num_message)
