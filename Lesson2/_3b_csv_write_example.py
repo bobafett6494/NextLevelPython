@@ -8,6 +8,6 @@ books = [book_1, book_2, book_3]
 
 
 with open('data/write_example.csv', 'w') as file:
-    writer = csv.DictWriter(file, ('title', 'author', 'published_year'))
+    writer = csv.DictWriter(file, ('title', 'author'), extrasaction="ignore")
     writer.writeheader()
     writer.writerows(books)

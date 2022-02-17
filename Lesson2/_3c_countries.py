@@ -4,6 +4,16 @@ all of the countries on that continent
 """
 
 # todo: Read data/continents.csv and save all countries by continent
+import csv
+
+with open("data/continents.csv", "r") as file:
+     reader = csv.DictReader(file)
+
+print(reader)
+
+continent_countries={}
+for line in reader:
+    continent_countries['XX'] = 'New capital'
 
 continents = [
     'Africa',
